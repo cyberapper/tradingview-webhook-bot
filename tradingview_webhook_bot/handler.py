@@ -15,8 +15,9 @@ def send_alert(data):
         tg_bot = Bot(token=config.tg_token)
         print(data["telegram"])
         try:
-            if isinstance(data["telegram"], list):
-                for chat_id in data["telegram"]:
+            print(len(data["telegram"].split(",")))
+            if len(data["telegram"].split(",")) > 1:
+                for chat_id in data["telegram"].split(","):
                     tg_bot.sendMessage(
                         chat_id,
                         msg,
