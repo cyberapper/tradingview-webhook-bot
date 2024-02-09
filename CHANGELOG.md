@@ -2,6 +2,17 @@
 
 
 
+## v0.1.0-rc.2 (2024-02-09)
+
+### Feature
+
+* feat(handler.py): add sending alerts to multiple telegram chat id support ([`acda603`](https://github.com/cyberapper/tradingview-webhook-bot/commit/acda603ad4a5c2918156f1e7bf383d3d00b241c8))
+
+### Unknown
+
+* Merge branch &#39;alg-33-feature-initiate-tradingview-webhook-repo&#39; into develop ([`3258d28`](https://github.com/cyberapper/tradingview-webhook-bot/commit/3258d287a9507c7ba2c510f3703a9ba6f168503b))
+
+
 ## v0.1.0-rc.1 (2024-02-09)
 
 ### Chore
