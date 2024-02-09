@@ -7,19 +7,27 @@ from discord_webhook import DiscordEmbed, DiscordWebhook
 from slack_webhook import Slack
 from telegram import Bot
 
-import config
-
+from tradingview_webhook_bot import config
 
 def send_alert(data):
     msg = data["msg"].encode("latin-1", "backslashreplace").decode("unicode_escape")
     if config.send_telegram_alerts:
         tg_bot = Bot(token=config.tg_token)
+        print(data["telegram"])
         try:
-            tg_bot.sendMessage(
-                data["telegram"],
-                msg,
-                parse_mode="MARKDOWN",
-            )
+            if isinstance(data["telegram"], list):
+                for chat_id in data["telegram"]:
+                    tg_bot.sendMessage(
+                        chat_id,
+                        msg,
+                        parse_mode="MARKDOWN",
+                    )
+            else:
+                tg_bot.sendMessage(
+                    data["telegram"],
+                    msg,
+                    parse_mode="MARKDOWN",
+                )
         except KeyError:
             tg_bot.sendMessage(
                 config.channel,
