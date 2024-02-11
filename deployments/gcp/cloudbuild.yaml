@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  script: |
+    docker build -t asia-east1-docker.pkg.dev/crescendo-410412/crescendo-repo/tv-webhook .
+  automapSubstitutions: true
+images:
+- 'asia-east1-docker.pkg.dev/crescendo-410412/crescendo-repo/tv-webhook'

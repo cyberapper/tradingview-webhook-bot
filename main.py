@@ -1,16 +1,10 @@
-# ----------------------------------------------- #
-# Plugin Name           : TradingView-Webhook-Bot #
-# Author Name           : fabston                 #
-# File Name             : main.py                 #
-# ----------------------------------------------- #
-
 import json
 import time
 
 from flask import Flask, request
 
-import config
-from handler import *
+from tradingview_webhook_bot import config
+from tradingview_webhook_bot.handler import *
 
 app = Flask(__name__)
 
