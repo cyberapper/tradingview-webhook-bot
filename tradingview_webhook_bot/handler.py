@@ -9,13 +9,12 @@ from telegram import Bot
 
 from tradingview_webhook_bot import config
 
+
 def send_alert(data):
     msg = data["msg"].encode("latin-1", "backslashreplace").decode("unicode_escape")
     if config.send_telegram_alerts:
         tg_bot = Bot(token=config.tg_token)
-        print(data["telegram"])
         try:
-            print(len(data["telegram"].split(",")))
             if len(data["telegram"].split(",")) > 1:
                 for chat_id in data["telegram"].split(","):
                     tg_bot.sendMessage(
@@ -98,3 +97,19 @@ def send_alert(data):
                 server.quit()
         except Exception as e:
             print("[X] Email Error:\n>", e)
+
+
+def broadcast_message(data):
+    msg = data["msg"].encode("latin-1", "backslashreplace").decode("unicode_escape")
+    if config.send_telegram_alerts:
+        tg_bot = Bot(token=config.tg_token)
+        try:
+            chat_ids = data.get("telegram", config.channel).split(",")
+            for chat_id in chat_ids:
+                tg_bot.sendMessage(
+                    chat_id,
+                    msg,
+                    parse_mode="MARKDOWN",
+                )
+        except Exception as e:
+            print("[X] Telegram Broadcast Error:\n>", e)

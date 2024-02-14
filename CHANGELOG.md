@@ -2,7 +2,18 @@
 
 
 
-## v0.1.0-rc.2 (2024-02-09)
+## v0.3.0 (2024-02-14)
+
+### Feature
+
+* feat(main.py): add new /broadcast endpoint to handle broadcasting alerts to multiple chat ids
+
+fix(main.py): remove unnecessary print statements in broadcast function ([`21847d9`](https://github.com/cyberapper/tradingview-webhook-bot/commit/21847d955a54c551222717a6dc561de5a235950a))
+
+* feat(handler.py): add new broadcast_message function to handle sending broadcast alerts to multiple chat ids ([`70d0590`](https://github.com/cyberapper/tradingview-webhook-bot/commit/70d05902611f4a0f51f4c2e10cf553e6f9a57d06))
+
+
+## v0.2.0 (2024-02-13)
 
 ### Feature
 
