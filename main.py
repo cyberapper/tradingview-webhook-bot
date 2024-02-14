@@ -34,6 +34,24 @@ def webhook():
         return "Error", 400
 
 
+@app.route("/broadcast", methods=["POST"])
+def broadcast():
+    try:
+        if request.method == "POST":
+            data = request.get_json()
+            key = data.get("key")
+            if key == config.sec_key:
+                print(get_timestamp(), "Broadcast Alert Received & Sent!")
+                broadcast_message(data)
+                return "Broadcast sent", 200
+            else:
+                print("[X]", get_timestamp(), "Broadcast Alert Received & Refused! (Wrong Key)")
+                return "Refused broadcast", 400
+    except Exception as e:
+        print("[X]", get_timestamp(), "Error in broadcast:\n>", e)
+        return "Error in broadcast", 400
+
+
 if __name__ == "__main__":
     from waitress import serve
 
