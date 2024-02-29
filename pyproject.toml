@@ -69,7 +69,7 @@ tag_format = "v{version}"
 [semantic_release.branches.main]
 match = "(main|master|develop)"
 prerelease_token = "rc"
-prerelease = true
+prerelease = false
 
 [semantic_release.changelog]
 template_dir = "templates"
