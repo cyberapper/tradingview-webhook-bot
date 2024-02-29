@@ -2,6 +2,15 @@
 
 
 
+## v0.4.0-rc.1 (2024-02-29)
+
+### Feature
+
+* feat(.env.example): add .env.example file with placeholder for Telegram bot token
+
+The .env.example file is added to the project. This file serves as an example for the required environment variables and their format. In this case, a placeholder for the Telegram bot token is added as `TG_TOKEN=&lt;telegram_bot_token&gt;`. This will help developers to easily set up their environment by copying this file and replacing the placeholder with the actual Telegram bot token. ([`c4ae490`](https://github.com/cyberapper/tradingview-webhook-bot/commit/c4ae490e75208c0b72c2d03f46255696dc8db815))
+
+
 ## v0.3.0 (2024-02-14)
 
 ### Feature
