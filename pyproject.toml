@@ -44,6 +44,8 @@ tzlocal = "2.1"
 urllib3 = "1.26.5"
 waitress = "2.1.1"
 werkzeug = "2.0.1"
+pika = "^1.3.2"
+python-dotenv = "^1.0.1"
 
 
 [tool.poetry.group.dev.dependencies]
