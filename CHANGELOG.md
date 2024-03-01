@@ -2,7 +2,34 @@
 
 
 
-## v0.4.0-rc.1 (2024-02-29)
+## v0.4.0 (2024-02-29)
+
+### Chore
+
+* chore(pyproject.toml): set prerelease flag to false to disable creating prerelease versions ([`50f33d9`](https://github.com/cyberapper/tradingview-webhook-bot/commit/50f33d991a36ec60c7857b0008f55fb84454faa9))
+
+### Feature
+
+* feat: add docker-compose development configuration file
+
+The `compose-dev.yml` file has been added to the project. This file is used for configuring the development environment using Docker Compose.
+
+refactor: remove docker-compose production configuration file
+
+The `docker-compose.yml` file has been deleted from the project. This file was no longer needed and has been removed.
+
+feat: add tests package and test files
+
+The `tests` package has been added to the project, along with the `__init__.py` file and the `test_emitter.py` file. These files are used for writing tests for the `emitter.py` module.
+
+feat: add emitter.py module
+
+The `emitter.py` module has been added to the `tradingview_webhook_bot` package. This module is responsible for emitting events in the webhook bot application.
+
+chore(pyproject.toml): add pika and python-dotenv dependencies ([`6a1ce28`](https://github.com/cyberapper/tradingview-webhook-bot/commit/6a1ce2863683807f708ada0d2366f1b077de2e0d))
+
+
+## v0.4.0-rc.1 (2024-02-28)
 
 ### Feature
 
