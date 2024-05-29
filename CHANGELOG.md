@@ -2,6 +2,19 @@
 
 
 
+## v0.5.0 (2024-05-29)
+
+### Feature
+
+* feat: Implement GCP pubsub event emitting ([`45cd0f0`](https://github.com/cyberapper/tradingview-webhook-bot/commit/45cd0f098baa467a2fa08c8a03c1b18bfffd172d))
+
+### Unknown
+
+* Merge pull request #9 from cyberapper/feature/alg-78-feature-implement-gcp-pubsub-event-emitting
+
+[ALG-78][Feature] Implement GCP pubsub event emitting ([`1186bb9`](https://github.com/cyberapper/tradingview-webhook-bot/commit/1186bb9785649efcb92df4d9200ad52dc88aaf70))
+
+
 ## v0.4.0 (2024-02-29)
 
 ### Chore
